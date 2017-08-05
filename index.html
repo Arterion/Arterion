@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Arterion</title>
+    <meta name="author" content="Rob Dongas">
+    <meta name="description" content="Arterion VR website">
+    <meta name="keywords" content="arterion,VR,virtual,reality">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" type="text/css">
+    <!-- <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
+   _gaq.push(['_trackPageview']);
+   (function()
+   {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script> -->
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <div class="title">
+        <h1>Arterion</h1>
+
+    </div>
+
+
+  </div>
+
+    <div class="container">
+        <div class="title">
+            <h1>Subscribe for email updates</h1>
+
+        </div>
+        <div class="card__container">
+            <div class="card">
+                <form id="signup" method="POST" action="https://api.sendgrid.com/v3/contactdb/recipients">
+                    <div class="row">
+                        <div class="info">
+
+                            <input placeholder="Jane Smith" id="full_name" name="full_name" type="text" required />
+                            <label for="full_name">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input id="email" type="email" placeholder="name@mail.com" name="email" required/>
+                            <label for="email">Email address</label>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="button">
+                <button type="submit">Subscribe</button>
+            </div>
+            </form>
+        </div>
+
+
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+
+</body>
+
+</html>
