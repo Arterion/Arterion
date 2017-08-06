@@ -30,7 +30,7 @@ var T = THREE;
        var fs = shaders.fragmentShaders.text;
        title = new TextParticles( "Arterion Labs" , font , vs , fs , {
         letterWidth: .05,
-        lineLength: 13,
+        lineLength: 15,
         uniforms:{
          time: time,
         }
