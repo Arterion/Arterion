@@ -8,6 +8,13 @@
   flex-direction: column;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .open-container {
   display: flex;
   align-items: center;
@@ -20,8 +27,12 @@
 }
 
 html {
-  background-color: #222;
   font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #000;
 }
 
 .title h1 {
