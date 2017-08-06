@@ -42,7 +42,7 @@ var T = THREE;
        // Passage comes from seperate file
        textParticles = new TextParticles( passage , font , vs , fs , {
         letterWidth: .02,
-        lineLength: 150,
+        lineLength: 250,
         uniforms:{
          time: time,
         }
@@ -54,10 +54,10 @@ var T = THREE;
       //  scene.add( title );
        //textParticles.material.uniforms.time.value = 1.;
        textParticles.position.x = - textParticles.totalWidth / 2;
-       controls.minPos     = -textParticles.totalHeight * 1.4;
+       controls.minPos     = -textParticles.totalHeight * 2;
        controls.maxPos     =  0;
        controls.multiplier =  .00001 * textParticles.totalHeight;
-       controls.dampening  = 0.95;
+       controls.dampening  = 0.96;
        window.addEventListener( 'resize', onWindowResize, false );
      }
 

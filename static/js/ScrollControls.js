@@ -6,14 +6,15 @@ function ScrollControls( camera , params ){
 
   this.dampening  = params.dampening  || .9;
   this.minPos     = params.minPos     || -1000;
-  this.maxPos     = params.maxPos     ||  0; 
+  this.maxPos     = params.maxPos     ||  0;
   this.multiplier = params.multiplier || .01;
 
   this.speed = 0;
-  
+  this.old_scroll_top = 0;
 
 
-  window.addEventListener( 'mousewheel', this.onMouseWheel.bind( this ), false );
+  //window.addEventListener( 'mousewheel', this.onMouseWheel.bind( this ), false );
+  document.addEventListener('scroll', this.onScrolling.bind( this ), true);
 
 
 }
@@ -28,7 +29,7 @@ ScrollControls.prototype.update = function(){
 
     this.camera.position.y = this.minPos;
     this.speed = 0;
-   
+
     // this.speed += this.
 
   }else if( this.camera.position.y > this.maxPos ){
@@ -37,7 +38,7 @@ ScrollControls.prototype.update = function(){
 
     this.camera.position.y = this.maxPos;
     this.speed = 0;
-   
+
     // this.speed += this.
 
   }
@@ -47,8 +48,14 @@ ScrollControls.prototype.update = function(){
 }
 
 
-ScrollControls.prototype.onMouseWheel = function( e ){
+ScrollControls.prototype.onScrolling = function( e ){
 
-  this.speed += e.wheelDeltaY * this.multiplier; 
+//  console.log(e);
+
+    var current_scroll_top = $(document).scrollTop();
+    var scroll_delta = current_scroll_top - this.old_scroll_top;
+    this.old_scroll_top = current_scroll_top;
+
+  this.speed -= 2 * scroll_delta * this.multiplier;
 
 }

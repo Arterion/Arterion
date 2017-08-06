@@ -9,7 +9,7 @@ varying float vDist;
 
 varying vec3 vMPos;
 
-const float smoothing = 1. / 8.0;
+const float smoothing = 1. / 16.0;
 
 void main(){
 
@@ -31,7 +31,7 @@ void main(){
   float lum = smoothstep( 0.4 - smoothing , 0.4 + smoothing , distance );
   float alpha = lum;
 
-  if( distance < .1 ){  alpha = 0.; }
+  if( distance < .2 ){  alpha = 0.; }
 
 
   gl_FragColor = vec4(col * 20. / pow( vDist , 10. ) , alpha * opacity );
