@@ -36,16 +36,30 @@ body {
 }
 
 .title h1 {
-  font-weight: 200;
+  font-weight: 400;
   color: #54d1db;
   text-align: center;
   letter-spacing: 2px;
   margin: 10px;
+  font-size: 3em;
 }
 
 .title p {
   color: #fff;
   text-align: center;
+}
+
+.header {
+
+}
+
+.header__name {
+  font-weight: 900 !important;
+  font-size: 4em;
+}
+.header__description {
+  font-size: 2em;
+  font-weight: 200;
 }
 
 .aof {
@@ -171,6 +185,7 @@ body {
   height: 100%;
   background-color: transparent;
   font-family: "Fira Mono";
+  font-weight: 500;
   border: none;
   outline: none;
   color: #0086a0;
@@ -197,7 +212,7 @@ label::after {
   width: 0px;
   height: 100%;
   right: 0;
-  background-color: #239ca6;
+  background-color: rgba(84, 209, 219, 0.5);
   transition: all 0.3s ease;
   z-index: -1;
 }
@@ -223,11 +238,11 @@ label::after {
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button button:hover {
-  background-color: #239ca6;
+  background-color: rgba(84, 209, 219, 0.5);
   cursor: pointer;
 }
 .button button:focus {
-  background-color: #239ca6;
+  background-color: rgba(84, 209, 219, 0.75);
   cursor: pointer;
 }
 .button button:active {
