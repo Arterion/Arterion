@@ -222,7 +222,7 @@ label::after {
   letter-spacing: 2px;
 }
 
-.button button {
+.button {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -235,16 +235,44 @@ label::after {
   outline: none;
   margin: 10px 0;
   font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button button:hover {
+.button:hover {
   background-color: rgba(84, 209, 219, 0.5);
   cursor: pointer;
 }
-.button button:focus {
+.button:focus {
   background-color: rgba(84, 209, 219, 0.75);
   cursor: pointer;
 }
-.button button:active {
+.button:active {
   background-color: #54d1db;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  flex-direction: row;
+  padding: 0 3em;
+}
+
+.footer__contact {
+  width: 30%;
+  display: inline-block;
+}
+
+.footer__contact a {
+  color: white;
+}
+
+.footer__details {
+  width: 30%;
+  display: inline-block;
+}
+
+.footer__details p {
+  color: #fff;
+  text-align: right;
 }
